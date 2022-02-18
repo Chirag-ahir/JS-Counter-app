@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Counter</title>
+    <link rel="icon" href="https://play-lh.googleusercontent.com/dvPnZK6yR0kw-nM0Vfcy7lNDmdYS50QMCa7318emsFIieB7AtbdJC0ykSv1tczw6udA">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body{
+            background-color:#084594;
+        }
+        .container-sm{
+            font-family: 'poppins';
+            background-color: #085E7D;
+            border: 2px solid white;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 40%;
+        }
+        h3{
+            font-size: 40px;
+        }
+        .counter{
+            font-size: 96px;
+        }
+        .btn{
+            font-size: 20px;
+        }
+        @media screen and (max-width:769px){
+            .container-sm{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-sm text-center p-3">
+        <h3 class="m-5 text-white">JS Counter App</h3>
+        <h1 class="counter m-5 text-white" id="counter">0</h1>
+    
+        <btn class="btn btn-dark mb-5" onclick="increment()">Increment</btn>
+        <btn class="btn btn-dark mb-5" onclick="reset()">Reset</btn>
+        <btn class="btn btn-dark mb-5" onclick="decrement()">Decrement</btn>
+    </div>   
+
+    <script>
+        let counter = 0;
+        function increment(){
+            counter = counter + 1;
+            //counter++
+            //counter += 1
+            document.getElementById('counter').innerHTML = counter;
+        }
+        function decrement(){
+            counter = counter - 1;
+            //counter--
+            //counter -= 1
+            document.getElementById('counter').innerHTML = counter;
+        }
+        function reset(){
+            counter = 0;
+            //counter++
+            //counter += 1
+            document.getElementById('counter').innerHTML = counter;
+        }
+    </script>
+</body>
+</html>
