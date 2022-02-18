@@ -1,2 +1,2 @@
-# JS-Counter-app Output
+# JS-Counter-app output
 ![](image.png)
